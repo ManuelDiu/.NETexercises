@@ -1,0 +1,12 @@
+C:\Users\mdiu\source\repos\Practico01\Shared\bin\Debug\Shared.dll
+C:\Users\mdiu\source\repos\Practico01\Shared\bin\Debug\Shared.pdb
+C:\Users\mdiu\source\repos\Practico01\Shared\obj\Debug\Shared.csproj.AssemblyReference.cache
+C:\Users\mdiu\source\repos\Practico01\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\mdiu\source\repos\Practico01\Shared\obj\Debug\Shared.dll
+C:\Users\mdiu\source\repos\Practico01\Shared\obj\Debug\Shared.pdb
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\bin\Debug\Shared.dll
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\bin\Debug\Shared.pdb
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\obj\Debug\Shared.csproj.AssemblyReference.cache
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\obj\Debug\Shared.dll
+C:\Users\mdiu\Documents\GitHub\PracticosTallerPuntoNET\Practico01\Shared\obj\Debug\Shared.pdb
