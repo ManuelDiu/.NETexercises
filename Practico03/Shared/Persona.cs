@@ -3,7 +3,6 @@
 {
     public class Persona
     {
-        //public int PersonaId { get; set; }
         public int Id { get; set; }
         public string Nombre { get; set; } = "-- Sin Nombre --";
         public string Apellido { get; set; } = "-- Sin Apellido --";
@@ -14,7 +13,7 @@
         private string telefono = "-- Sin Teléfono --";
         public DateTime FechaNacimiento { get; set; }
         private string documento = "";
-        public List<Vehiculo> Vehiculos { get; set; }
+        public List<Vehiculo> Vehiculos { get; set; } = new List<Vehiculo>();
 
         public string Documento
         {

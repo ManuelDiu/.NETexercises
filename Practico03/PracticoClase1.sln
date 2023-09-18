@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{DF3A893A-8532-48ED-8CF9-D674574D0664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{500F80F2-EEA9-45DD-BCCD-824B93150FDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{500F80F2-EEA9-45DD-BCCD-824B93150FDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{D97EF56E-B68F-4A8C-B348-CE921541D8D1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0F34B048-78E6-4850-B100-4D0AEC35AE95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{500F80F2-EEA9-45DD-BCCD-824B93150FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{500F80F2-EEA9-45DD-BCCD-824B93150FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{500F80F2-EEA9-45DD-BCCD-824B93150FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D97EF56E-B68F-4A8C-B348-CE921541D8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D97EF56E-B68F-4A8C-B348-CE921541D8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D97EF56E-B68F-4A8C-B348-CE921541D8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D97EF56E-B68F-4A8C-B348-CE921541D8D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F34B048-78E6-4850-B100-4D0AEC35AE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F34B048-78E6-4850-B100-4D0AEC35AE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F34B048-78E6-4850-B100-4D0AEC35AE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F34B048-78E6-4850-B100-4D0AEC35AE95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -33,20 +33,49 @@ namespace DataAccessLayer.DALs
 
         public List<Persona> Get()
         {
-            return _dbContext.Personas
-                             .Select(p => new Persona { Id = (int)p.Id, Nombre = p.Nombres, Apellido = p.Apellidos, Telefono = p.Telefono, Direccion = p.Direccion, FechaNacimiento = p.FechaNacimiento, Documento = p.Documento })
+            List<Personas> personas = _dbContext.Personas.ToList();
+            List<Persona> resPersonas = new List<Persona>();
+            foreach (var p in personas)
+            {
+                Persona persona = new Persona { Id = (int)p.Id, Documento = p.Documento, Nombre = p.Nombres, Apellido = p.Apellidos, Direccion = p.Direccion, FechaNacimiento = p.FechaNacimiento, Telefono = p.Telefono };
+
+                List<Vehiculos> vehiculosPersona = _dbContext.Vehiculos.Where(v => v.Persona.Documento == persona.Documento).ToList();
+                if (vehiculosPersona.Count > 0)
+                {
+                    List<Vehiculo> vehiculos = vehiculosPersona
+                             .Select(p => new Vehiculo { Matricula = p.Matricula, Marca = p.Marca, Modelo = p.Modelo, PersonaId = p.Id })
                              .ToList();
+                    persona.Vehiculos = vehiculos;
+                }
+                resPersonas.Add(persona);
+            }
+            return resPersonas;
         }
 
-        public Persona? Get(string documento)
+        public Persona Get(string documento)
         {
-            Personas? found = _dbContext.Personas.FirstOrDefault(p => p.Documento == documento);
-            if (found == null)
+            Personas p = _dbContext.Personas.FirstOrDefault(x => x.Documento == documento);
+            if (p == null)
             {
                 return null;
             }
-            Persona persona = new Persona { Nombre = found.Nombres, Apellido = found.Apellidos, Telefono = found.Telefono, Direccion = found.Direccion, FechaNacimiento = found.FechaNacimiento, Documento = found.Documento };
+            Persona persona = new Persona();
+            persona.Id = (int)p.Id;
+            persona.Nombre = p.Nombres;
+            persona.Apellido = p.Apellidos;
+            persona.Documento = p.Documento;
+            persona.Telefono = p.Telefono;
+            persona.Direccion = p.Direccion;
+            persona.FechaNacimiento = p.FechaNacimiento;
 
+            List<Vehiculos> vehiculoPersona = _dbContext.Vehiculos.Where(v => v.Persona.Documento == persona.Documento).ToList();
+            if (vehiculoPersona.Count > 0)
+            {
+                List<Vehiculo> vehiculos = vehiculoPersona
+                         .Select(v => new Vehiculo { Id = (int)v.Id, Matricula = v.Matricula, Marca = v.Marca, Modelo = v.Modelo, PersonaId = p.Id })
+                         .ToList();
+                persona.Vehiculos = vehiculos;
+            }
             return persona;
         }
 
